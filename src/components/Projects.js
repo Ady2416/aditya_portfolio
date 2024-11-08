@@ -5,12 +5,12 @@ const Projects = () => {
         {
             name: 'Portfolio Website',
             description: 'A personal portfolio website to showcase my web development projects.',
-            githubLink: 'https://github.com/yourusername/portfolio-website' // Replace with your actual GitHub link
+            githubLink: 'https://github.com/Ady2416/aditya_portfolio' // Replace with your actual GitHub link
         },
         {
             name: 'Snake Game',
             description: 'A classic Snake game built with Java Swing.',
-            githubLink: 'https://github.com/yourusername/snake-game' // Replace with your actual GitHub link
+            githubLink: 'https://github.com/Ady2416/snake-game' // Replace with your actual GitHub link
         }
         // Add more projects as needed
     ];
