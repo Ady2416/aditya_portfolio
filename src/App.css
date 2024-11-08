@@ -1,0 +1,164 @@
+/* App.css */
+
+/* General layout styling */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #f0f2f5 0%, #c1e0ff 100%);
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+/* Main container with background animation */
+.container-fluid {
+  background-size: cover;
+  padding: 40px;
+  animation: backgroundAnimation 12s infinite ease-in-out;
+  transition: all 0.3s ease;
+}
+
+/* Section card styling */
+.section-card {
+  padding: 25px;
+  border-radius: 15px;
+  margin: 20px 0;
+  background-color: #ffffff;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.section-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Alternating colors for sections */
+.section-card:nth-child(odd) {
+  background-color: #e0f7ff;
+}
+.section-card:nth-child(even) {
+  background-color: #f3e5f5;
+}
+
+/* Heading styling */
+h2 {
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 15px;
+  position: relative;
+  display: inline-block;
+  animation: fadeInRight 0.5s ease;
+}
+
+/* Subtle underline animation for headings */
+h2::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 4px;
+  background-color: #4a90e2;
+  left: 0;
+  bottom: -5px;
+  transition: width 0.4s ease;
+}
+
+h2:hover::after {
+  width: 100%;
+}
+
+/* Button styling with hover effects */
+.btn-hover {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background: #007bff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.2);
+}
+
+.btn-hover:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+  box-shadow: 0px 8px 20px rgba(0, 123, 255, 0.4);
+}
+
+/* Active button styling */
+.btn.active {
+  background: #0069d9;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* List styling for skill and project descriptions */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  padding: 6px 0;
+  color: #555;
+  position: relative;
+  padding-left: 20px;
+}
+
+ul li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #007bff;
+}
+
+/* Smooth fade-in effect */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Heading underline fade-in animation */
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Gradient background animation */
+@keyframes backgroundAnimation {
+  0% {
+    background: linear-gradient(135deg, #f0f2f5, #c1e0ff);
+  }
+  50% {
+    background: linear-gradient(135deg, #dff1ff, #b0dbff);
+  }
+  100% {
+    background: linear-gradient(135deg, #f0f2f5, #c1e0ff);
+  }
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  .btn-hover {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .section-card {
+    padding: 20px;
+    margin: 10px 0;
+  }
+}
